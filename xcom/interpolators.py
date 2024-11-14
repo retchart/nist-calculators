@@ -135,7 +135,7 @@ class MaterialFactory:
     @classmethod
     def _prepare_element_symbol(cls):
         cls.element_symbols = {}
-        with open(PERIODIC_TABLE_PATH, newline='') as csvfile:
+        with open(PERIODIC_TABLE_PATH, newline='', encoding='utf-8') as csvfile:
             reader = csv.reader(csvfile, delimiter=",")
             next(reader)
             for row in reader:
